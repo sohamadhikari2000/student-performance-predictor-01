@@ -44,7 +44,7 @@ def predict_datapoint():
             # print("after Prediction")
             return render_template('home.html',results=results[0])
         except Exception as e:
-            return ^str(e)
+            return str(e)
         
 
 if __name__=="__main__":
