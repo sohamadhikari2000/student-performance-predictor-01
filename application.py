@@ -11,7 +11,11 @@ application=Flask(__name__)
 
 app=application
 
+# loading the pipeline globally
+predict_pipeline=PredictPipeline()
+
 ## Route for a home page
+
 
 @app.route('/')
 def index():
@@ -38,7 +42,7 @@ def predict_datapoint():
             # print(pred_df)
             # print("Before Prediction")
 
-            predict_pipeline=PredictPipeline()
+
             # print("Mid Prediction")
             results=predict_pipeline.predict(pred_df)
             # print("after Prediction")
