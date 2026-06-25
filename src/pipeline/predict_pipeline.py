@@ -4,13 +4,16 @@ from src.exception import CustomException
 from src.utils import load_object
 import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 class PredictPipeline:
     def __init__(self):
         try:
-            self.model_path = os.path.join("artifacts","model.pkl")
+
+            self.model_path = os.path.join(BASE_DIR, "artifacts", "model.pkl")
             # model_path = "artifacts\model.pkl"
             # preprocessor_path = "artifacts\preprocessor.pkl"
-            self.preprocessor_path = os.path.join("artifacts","preprocessor.pkl")
+            self.preprocessor_path = os.path.join(BASE_DIR, "artifacts", "preprocessor.pkl")
               
             self.model = load_object(file_path=self.model_path)
             self.preprocessor = load_object(file_path=self.preprocessor_path)
