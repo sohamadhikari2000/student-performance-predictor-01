@@ -4,100 +4,117 @@
 ![Flask](https://img.shields.io/badge/Flask-WebApp-black?logo=flask)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
 ![AWS](https://img.shields.io/badge/AWS-Elastic%20Beanstalk-yellow?logo=amazonaws)
-![Status](https://img.shields.io/badge/Status-Deployed-success)
+![Status](https://img.shields.io/badge/Status-Live-success)
 
-A production-ready **Machine Learning web application** that predicts student academic performance using demographic and educational features. Built with **Flask** and deployed on **AWS Elastic Beanstalk**.
+A production-ready **Machine Learning web application** that predicts student performance using demographic and academic features. This project demonstrates an **end-to-end ML pipeline** with real-time predictions deployed on AWS.
 
 ---
 
-## 🚀 Live Application
+## 🚀 Live Demo
 
 👉 http://student-performance-env.eba-53ppwiqr.eu-north-1.elasticbeanstalk.com/
 
 ---
 
-## 🧠 Key Features
+## 🧠 Problem Statement
 
-* End-to-end ML pipeline (training → preprocessing → prediction)
-* Real-time prediction via web interface
-* Handles categorical + numerical features
-* Cloud deployment with scalable infrastructure
-* Optimized for production (fast inference)
+Predict student performance based on various factors such as:
+
+* Demographics (gender, ethnicity)
+* Parental education level
+* Lunch type
+* Test preparation course
+* Reading & Writing scores
+
+---
+
+## ⚡ Key Highlights
+
+* ✅ End-to-end ML pipeline (data → preprocessing → prediction)
+* ✅ Real-time inference via Flask web app
+* ✅ Production deployment using AWS Elastic Beanstalk
+* ✅ Handles categorical + numerical features
+* ✅ Modular and scalable code structure
 
 ---
 
 ## 🏗️ Tech Stack
 
-* **Programming:** Python
+* **Language:** Python
 * **Backend:** Flask
-* **ML Libraries:** Scikit-learn, XGBoost, CatBoost
-* **Data Processing:** Pandas, NumPy
+* **ML:** Scikit-learn, XGBoost, CatBoost
+* **Data:** Pandas, NumPy
 * **Deployment:** AWS Elastic Beanstalk
-* **Model Serialization:** Pickle / Dill
+* **Serialization:** Pickle / Dill
 
 ---
 
-## 📂 Project Architecture
+## 📂 Project Structure
 
-```
-.
-├── application.py          # Flask app entry point
-├── artifacts/              # Trained model & preprocessor
+```id="z6yxvn"
+student-performance-predictor-01/
+│
+├── application.py              # Flask entry point
+├── artifacts/                 # Saved model & preprocessor
 ├── src/
-│   ├── pipeline/           # Prediction pipeline
-│   ├── utils.py            # Utility functions
-│   └── exception.py        # Custom exception handling
-├── templates/              # HTML frontend
+│   ├── pipeline/
+│   │   └── predict_pipeline.py
+│   ├── utils.py
+│   └── exception.py
+├── templates/
+│   ├── index.html
+│   └── home.html
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ Application Workflow
 
-1. User inputs data through web form
-2. Data is converted into a DataFrame
-3. Preprocessing pipeline transforms inputs
-4. Trained model generates prediction
-5. Result displayed on UI
+1. User inputs data via web form
+2. Data is converted into a Pandas DataFrame
+3. Preprocessing pipeline transforms features
+4. Trained ML model generates prediction
+5. Output is displayed on the UI
 
 ---
 
 ## ☁️ Deployment (AWS)
 
-Deployed using AWS Elastic Beanstalk:
+This application is deployed using **AWS Elastic Beanstalk**, enabling:
 
-* Automated environment provisioning
-* Load-balanced application hosting
-* Production-ready configuration
-
----
-
-## 🧪 Model Pipeline
-
-* Feature engineering + preprocessing pipeline
-* Model trained using regression algorithms
-* Serialized using `pickle` for fast inference
+* Scalable cloud infrastructure
+* Managed deployment
+* Production-ready hosting
 
 ---
 
-## 📌 Future Enhancements
+## 🧪 ML Pipeline
 
-* REST API integration
-* Docker containerization
+* Feature preprocessing using pipeline
+* Model training using regression algorithms
+* Model serialization using `pickle`
+* Efficient prediction pipeline for real-time inference
+
+---
+
+## 📌 Future Improvements
+
+* Add REST API support
+* Dockerize application
 * CI/CD pipeline (GitHub Actions)
-* Model monitoring & logging
+* Model monitoring and logging
 
 ---
 
 ## 👨‍💻 Author
 
-**Your Name**
-GitHub: https://github.com/your-username
+**Soham Adhikari**
+GitHub: https://github.com/sohamadhikari2000
 
 ---
 
 ## ⭐ Support
 
-If you found this useful, consider giving a ⭐ to the repo!
+If you found this useful, give it a ⭐ on GitHub!
