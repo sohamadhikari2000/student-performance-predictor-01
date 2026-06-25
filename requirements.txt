@@ -5,8 +5,8 @@ matplotlib
 scikit-learn
 # catboost
 # xgboost
-flask
+Flask
 dill
 psycopg2-binary>=2.9.6
 
--e .
+# -e .

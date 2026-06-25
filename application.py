@@ -20,7 +20,7 @@ def index():
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
-        return render_template('home.html')
+        return render_template('home2.html')
     else:
         try:
             print("FORM DATA:", request.form)
@@ -42,7 +42,7 @@ def predict_datapoint():
             # print("Mid Prediction")
             results=predict_pipeline.predict(pred_df)
             # print("after Prediction")
-            return render_template('home.html',results=np.round(results[0],0))
+            return render_template('home2.html',results=np.round(results[0],0))
         except Exception as e:
             return str(e)
         
