@@ -9,4 +9,4 @@ flask
 dill
 psycopg2-binary>=2.9.6
 
-# -e .
+-e .
